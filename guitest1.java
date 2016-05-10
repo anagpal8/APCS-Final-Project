@@ -10,7 +10,7 @@
  *
  * @author gvalent8
  */
-public class guitest1 extends javax.swing.JFrame {
+public class guiFinal extends javax.swing.JFrame {
 
     /**
      * Creates new form guitest1
