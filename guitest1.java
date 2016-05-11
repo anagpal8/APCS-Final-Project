@@ -63,8 +63,34 @@ public class guitest1 extends javax.swing.JFrame {
         
         
         
-        ButtonHandler listener = new ButtonHandler();
+        add listener = new add();
         jButton2.addActionListener(listener);
+        
+        subtract listener2 = new subtract();
+        jButton3.addActionListener(listener);
+        
+        multi listener3 = new multi();
+        jButton4.addActionListener(listener);
+        
+        divide listener4 = new divide();
+        jButton5.addActionListener(listener);
+        
+        abs listener5 = new abs();
+        jButton6.addActionListener(listener);
+        
+        base2 listener6 = new base2();
+        jButton7.addActionListener(listener);
+        
+        base16 listener7 = new base16();
+        jButton8.addActionListener(listener);
+        
+        root listener8 = new root();
+        jButton9.addActionListener(listener);
+        
+        square listener9 = new square();
+        jButton10.addActionListener(listener);
+        
+        
 
         jFormattedTextField2.setEnabled(false);
 
@@ -204,13 +230,59 @@ public class guitest1 extends javax.swing.JFrame {
     
     
     
-    private static class ButtonHandler implements ActionListener {
+    private static class add implements ActionListener {
       public void actionPerformed(ActionEvent e) {
          System.exit(0);
       }
    }
-    
-    
+   
+   private static class subtract implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class multi implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class divide implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class base2 implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class base16 implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class root implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class square implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
+   
+   private static class abs implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         System.exit(0);
+      }
+   }
     
     
     
