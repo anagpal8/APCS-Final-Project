@@ -17,12 +17,23 @@ public class StringAnalyzer
     {
         //boolean multiply = false;
         //ArrayList<String> values = new ArrayList<String>();
+        if (string1.indexOf("*") == -1)
+        {
+            return false;
+        }
+        return true;
+              
+        /*boolean answer = false;
         for (int i =0; i<string1.length(); i++)
         {
-            values.add(string1.substring(i, i+1));
+            if (string1.substring(i, i+1).equals("*"))
+            {
+                answer = true;
+            }
         } 
-        
-        for (int i =0; i < values.size(); i++)
+        */
+        //return answer;
+        /*for (int i =0; i < values.size(); i++)
         {
             if (values.get(i) == "*")
             {
@@ -31,8 +42,9 @@ public class StringAnalyzer
             }
             
         }
+        */
 
-        return null;
+        
     }
     public boolean containsDivide()
     {

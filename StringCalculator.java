@@ -13,6 +13,7 @@ public class StringCalculator extends Calculator
         {
             values.add(expression.substring(i, i+1));
         }
+        
         while(s1.containsMultiply() == true || s1.containsDivide() == true)
         {
             for (int i = 0; i < values.size(); i++)
@@ -22,6 +23,7 @@ public class StringCalculator extends Calculator
                     values.set(i, "" + (Integer.parseInt(values.get(i+1)) * Integer.parseInt(values.get(i-1))));
                     values.remove(i-1);
                     values.remove(i);
+                    System.out.println(values.get(i));
                    
                 }
                 else if (values.get(i) == "/")
@@ -57,8 +59,8 @@ public class StringCalculator extends Calculator
             }
             
         }
-        String value = "";
-        for (int i = 0; i < values.size(); i++)
+        //String value = "";
+        /*for (int i = 0; i < values.size(); i++)
         {
             value+=values.get(i);
         }
@@ -82,7 +84,7 @@ public class StringCalculator extends Calculator
         }
         */
         
-        System.out.println(value);
+        //System.out.println(value);
     }
     
 }
