@@ -21,7 +21,7 @@ public class StringCalculator extends Calculator
             {
                 if (values.get(i).equals("*"))
                 {
-                    values.set(i, "" + (Integer.parseInt(values.get(i+1)) * Integer.parseInt(values.get(i-1))));
+                    values.set(i, "" + (Double.parseDouble(values.get(i+1)) * Double.parseDouble(values.get(i-1))));
                     values.remove(i-1);
                     values.remove(i);
                     i = 0;
@@ -35,7 +35,7 @@ public class StringCalculator extends Calculator
                 }
                 else if (values.get(i).equals("/"))
                 {
-                    values.set(i, "" + (Integer.parseInt(values.get(i-1)) / Integer.parseInt(values.get(i+1))));
+                    values.set(i, "" + (Double.parseDouble(values.get(i-1)) / Double.parseDouble(values.get(i+1))));
                     values.remove(i-1);
                     values.remove(i);
                     i = 0;
@@ -62,7 +62,7 @@ public class StringCalculator extends Calculator
             {
                 if (values.get(i).equals("+"))
                 {
-                    values.set(i, "" + (Integer.parseInt(values.get(i+1)) + Integer.parseInt(values.get(i-1))));
+                    values.set(i, "" + (Double.parseDouble(values.get(i+1)) + Double.parseDouble(values.get(i-1))));
                     values.remove(i-1);
                     values.remove(i);
                     i = 0;
@@ -76,7 +76,7 @@ public class StringCalculator extends Calculator
                 }
                 else if (values.get(i).equals("-"))
                 {
-                    values.set(i, "" + (Integer.parseInt(values.get(i-1)) - Integer.parseInt(values.get(i+1))));
+                    values.set(i, "" + (Double.parseDouble(values.get(i-1)) - Double.parseDouble(values.get(i+1))));
                     values.remove(i-1);
                     values.remove(i);
                     i = 0;
