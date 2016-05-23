@@ -50,68 +50,43 @@ public class StringAnalyzer
     {
         //boolean divide = false;
         //ArrayList<String> values = new ArrayList<String>();
-        for (int i =0; i<string1.length(); i++)
+        if (string1.indexOf("/") == -1)
         {
-            values.add(string1.substring(i, i+1));
-        } 
-        
-        for (int i =0; i < values.size(); i++)
-        {
-            if (values.get(i) == "/")
-            {
-                priority = 1;
-                return true;
-            }
-            
+            return false;
         }
-
-        return false;
+        return true;
     }
     public boolean containsAdd()
     {
-        //boolean add = false;
-        //ArrayList<String> values = new ArrayList<String>();
-        for (int i =0; i<string1.length(); i++)
+        if (string1.indexOf("+") == -1)
         {
-            values.add(string1.substring(i, i+1));
-        } 
-        
-        for (int i =0; i < values.size(); i++)
-        {
-            if (values.get(i) == "+")
-            {
-                priority = 1;
-                return true;
-            }
-            
+            return false;
         }
-
-        return false;
+        return true;
     }
     public boolean containsSubtract()
     {
-        //boolean subtract = false;
-        //ArrayList<String> values = new ArrayList<String>();
-        for (int i =0; i<string1.length(); i++)
+        if (string1.indexOf("-") == -1)
         {
-            values.add(string1.substring(i, i+1));
-        } 
-        
-        for (int i =0; i < values.size(); i++)
-        {
-            if (values.get(i) == "-")
-            {
-                priority = 1;
-                return true;
-            }
-            
+            return false;
         }
-
-        return false;
+        return true;
     }
-    public int getPriority()
+    public boolean isDecimal()
     {
-        return priority;
+        if (string1.indexOf(".") == -1)
+        {
+            return false;
+        }
+        return true;
+    }
+    public int Decimal()
+    {
+        return string1.indexOf(".");
+    }
+    public int length()
+    {
+        return string1.length();
     }
 
 }
