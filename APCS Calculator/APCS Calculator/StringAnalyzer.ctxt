@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=s
+comment0.target=StringAnalyzer(java.lang.String)
+comment1.params=
+comment1.target=boolean\ containsMultiply()
+comment2.params=
+comment2.target=boolean\ containsDivide()
+comment3.params=
+comment3.target=boolean\ containsAdd()
+comment4.params=
+comment4.target=boolean\ containsSubtract()
+comment5.params=
+comment5.target=int\ getPriority()
+numComments=6

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BaseConversions()
+comment1.params=number
+comment1.target=java.lang.String\ convertBaseTwo(int)
+comment2.params=number
+comment2.target=java.lang.String\ convertHex(int)
+numComments=3
