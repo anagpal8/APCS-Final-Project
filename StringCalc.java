@@ -2,14 +2,16 @@ import java.util.*;
 
 public class StringCalc
 { 
-    public StringCalc()
+    String expression;
+    public StringCalc(String ex1)
     {
+        expression = ex1;
         
     }
     
-    public String operations(String ex1)
+    public String operations()
     {
-        String expression = ex1;
+        
 
         StringAnalyzer s1 = new StringAnalyzer(expression);
         ArrayList<String> values = new ArrayList<String>();
