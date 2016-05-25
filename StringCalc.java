@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class StringCalc
@@ -37,43 +36,7 @@ public class StringCalc
         {
             return expression;
         }
-
-        int numberOfSymbols = 0;
-        for (int i = 0; i < values.size(); i++)
-        {
-            if (values.get(i).equals("*") || values.get(i).equals("-") || values.get(i).equals("+") || values.get(i).equals("/"))
-            {
-                numberOfSymbols++;
-            }
-
-        }
-
-        int x = 0;
-        String expression2 = "";
-        int ctr;
-        int loc = 0;
-
-
-        for (ctr = 0; ctr <= numberOfSymbols; ctr++)
-        {
-            while (!(values.get(x).equals( "*")) && (x)<values.size())//, "/", "+", "-")
-            {
-                expression2+=values.get(x);
-                x++;
-                //ctr++;
-            }
-            values.set(loc, expression2);
-            
-            for (int i = 1; i < x; i++)
-            {
-                values.remove(loc+1);
-            }
-            ctr++;
-            expression2 = "";
-            System.out.println(x);
-            
-           
-        }
+       
         
 
         
