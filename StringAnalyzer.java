@@ -2,91 +2,102 @@ import java.util.*;
 public class StringAnalyzer
 {
     private String string1;
-    private int priority;
+
     ArrayList<String> values = new ArrayList<String>();
-    
-    
- 
+
     public StringAnalyzer (String s)
+    /**
+     * @param takes in a string as part of the constructor
+     * @creates a StringAnalyzer
+
+     */
     {
         string1 = s;
 
     }
 
     public boolean containsMultiply()
+    /**
+     * @param none
+     * @returns true or false depending on whether or not it has multiplication
+     * method sends output to the functions in StringCalc
+     */
     {
-        //boolean multiply = false;
-        //ArrayList<String> values = new ArrayList<String>();
+
         if (string1.indexOf("*") == -1)
         {
             return false;
         }
         return true;
-              
-        /*boolean answer = false;
-        for (int i =0; i<string1.length(); i++)
-        {
-            if (string1.substring(i, i+1).equals("*"))
-            {
-                answer = true;
-            }
-        } 
-        */
-        //return answer;
-        /*for (int i =0; i < values.size(); i++)
-        {
-            if (values.get(i) == "*")
-            {
-                priority = 1;
-                return true;
-            }
-            
-        }
-        */
 
-        
+
     }
+
     public boolean containsDivide()
     {
-        //boolean divide = false;
-        //ArrayList<String> values = new ArrayList<String>();
+        /**
+         * @param none
+         * @returns true or false depending on whether or not it has division
+         * method sends output to the functions in StringCalc
+         */
+
         if (string1.indexOf("/") == -1)
         {
             return false;
         }
         return true;
     }
+
     public boolean containsAdd()
     {
+        /**
+         * @param none
+         * @returns true or false depending on whether or not it has addition
+         * method sends output to the functions in StringCalc
+         */
         if (string1.indexOf("+") == -1)
         {
             return false;
         }
         return true;
     }
+
     public boolean containsSubtract()
     {
+        /**
+         * @param none
+         * @returns true or false depending on whether or not it has subtraction
+         * method sends output to the functions in StringCalc
+         */
         if (string1.indexOf("-") == -1)
         {
             return false;
         }
         return true;
     }
+
     public boolean isDecimal()
     {
+        /**
+         * @param none
+         * @returns true or false depending on whether or not it has a decimal
+         * method sends output to the functions in StringCalc
+         */
         if (string1.indexOf(".") == -1)
         {
             return false;
         }
         return true;
     }
+
     public int Decimal()
+    /**
+     * returns the location of where the decimal is in the function
+     * sends this to StringCalc
+     */
     {
         return string1.indexOf(".");
     }
-    public int length()
-    {
-        return string1.length();
-    }
+
 
 }

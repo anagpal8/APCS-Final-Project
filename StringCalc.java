@@ -9,7 +9,13 @@ public class StringCalc
 
     }
 
+    
     public String operations()
+    /**
+     * @param none; it just takes the StringCalc and performs the operations
+     * @returns a string of the solution to the problem
+     * method sends the output to the output screen on the Calculator
+     */
     {
 
         StringAnalyzer s1 = new StringAnalyzer(expression);
