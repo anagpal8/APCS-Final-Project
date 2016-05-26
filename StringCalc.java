@@ -1,26 +1,19 @@
 import java.util.*;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptEngine;
 
 public class StringCalc
 { 
-    String expression;
-    public StringCalc(String ex1)
-    {
-        expression = ex1;
 
+    public StringCalc()
+    {
+   
     }
-
     
-    public String operations()
-    /**
-     * @param none; it just takes the StringCalc and performs the operations
-     * @returns a string of the solution to the problem
-     * method sends the output to the output screen on the Calculator
-     */
+    public String operations(String expression)
     {
-
         StringAnalyzer s1 = new StringAnalyzer(expression);
         ArrayList<String> values = new ArrayList<String>();
-
         for (int i =0; i<expression.length(); i++)
         {
 
@@ -42,11 +35,7 @@ public class StringCalc
         {
             return expression;
         }
-       
-        
-
-        
-        
+               
         while(s1.containsMultiply() || s1.containsDivide())
         {
             for (int i = 0; i < values.size(); i++)
@@ -123,5 +112,5 @@ public class StringCalc
         }
 
         return(values.get(0));
-    }
+}
 }
