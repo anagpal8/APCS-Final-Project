@@ -1,12 +1,22 @@
 
 public class BaseConversions
 {
-    private int x; 
+
     public BaseConversions()
     {
-        x = 0;
+
     }
 
+    /**
+     * @param number from the answerOutput of the 
+     * @return void
+     * method sends the output to another class to calculate binary
+     */
+    public String conBaseThru(int num)
+    {
+        return convertBaseTwo(num);
+    }
+    
     public String convertBaseTwo(int number)
     {
 
