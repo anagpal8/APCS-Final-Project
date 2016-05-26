@@ -16,6 +16,9 @@ public class MyCal extends javax.swing.JFrame {
     double secondnum;
     double result;
     String operation;
+    StringCalc c1 = new StringCalc();
+    BaseConversions b1 = new BaseConversions();
+    StringCalc2 c2 = new StringCalc2();
     
     /**
      * Creates new form MyCal
@@ -58,17 +61,13 @@ public class MyCal extends javax.swing.JFrame {
         hexConversion = new javax.swing.JButton();
         binaryConvert = new javax.swing.JButton();
         squareRoot = new javax.swing.JButton();
-        Answers = new javax.swing.JComboBox();
         color = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         eight.setText("8");
-        eight.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                eightMouseClicked(evt);
-            }
-        });
+        
         eight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eightActionPerformed(evt);
@@ -83,11 +82,7 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         seven.setText("7");
-        seven.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                sevenMouseClicked(evt);
-            }
-        });
+       
         seven.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sevenActionPerformed(evt);
@@ -95,11 +90,7 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         one.setText("1");
-        one.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                oneMouseClicked(evt);
-            }
-        });
+       
         one.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 oneActionPerformed(evt);
@@ -107,11 +98,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         five.setText("5");
-        five.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fiveMouseClicked(evt);
-            }
-        });
         five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fiveActionPerformed(evt);
@@ -119,11 +105,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         six.setText("6");
-        six.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                sixMouseClicked(evt);
-            }
-        });
         six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sixActionPerformed(evt);
@@ -131,11 +112,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         four.setText("4");
-        four.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fourMouseClicked(evt);
-            }
-        });
         four.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fourActionPerformed(evt);
@@ -143,11 +119,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         nine.setText("9");
-        nine.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nineMouseClicked(evt);
-            }
-        });
         nine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nineActionPerformed(evt);
@@ -155,11 +126,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         two.setText("2");
-        two.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                twoMouseClicked(evt);
-            }
-        });
         two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 twoActionPerformed(evt);
@@ -167,11 +133,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         three.setText("3");
-        three.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                threeMouseClicked(evt);
-            }
-        });
         three.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 threeActionPerformed(evt);
@@ -179,11 +140,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         zero.setText("0");
-        zero.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                zeroMouseClicked(evt);
-            }
-        });
         zero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 zeroActionPerformed(evt);
@@ -191,11 +147,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         decimal.setText(".");
-        decimal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                decimalMouseClicked(evt);
-            }
-        });
         decimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 decimalActionPerformed(evt);
@@ -203,11 +154,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         clear.setText("AC");
-        clear.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                clearMouseClicked(evt);
-            }
-        });
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
@@ -215,11 +161,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         square.setText("a ²");
-        square.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                squareMouseClicked(evt);
-            }
-        });
         square.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 squareActionPerformed(evt);
@@ -227,11 +168,6 @@ public class MyCal extends javax.swing.JFrame {
         });
 
         timesNegOne.setText("+-");
-        timesNegOne.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                timesNegOneMouseClicked(evt);
-            }
-        });
         timesNegOne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timesNegOneActionPerformed(evt);
@@ -283,8 +219,18 @@ public class MyCal extends javax.swing.JFrame {
         answerOutput.setEditable(false);
 
         hexConversion.setText("hexadecimal");
+        hexConversion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hexConversionActionPerformed(evt);
+            }
+        });
 
         binaryConvert.setText("binary");
+        binaryConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                binaryConvertActionPerformed(evt);
+            }
+        });
 
         squareRoot.setText("√(  a  )");
         squareRoot.addActionListener(new java.awt.event.ActionListener() {
@@ -293,17 +239,18 @@ public class MyCal extends javax.swing.JFrame {
             }
         });
 
-        Answers.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Answers.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnswersActionPerformed(evt);
-            }
-        });
 
         color.setText("Color");
         color.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorActionPerformed(evt);
+            }
+        });
+        
+        back.setText("Backspace");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
             }
         });
 
@@ -354,7 +301,8 @@ public class MyCal extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(absoluteValue, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Answers, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(plus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -383,7 +331,8 @@ public class MyCal extends javax.swing.JFrame {
                     .addComponent(square, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timesNegOne, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(absoluteValue, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Answers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -427,234 +376,331 @@ public class MyCal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>                        
-
-    private void eightMouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
-
+    /**
+     * @param the action event
+     * @return void
+     * The method adds eight to the currentInput 
+     */                             
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String takeIn;
         takeIn = currentInput.getText() + eight.getText();
         currentInput.setText(takeIn);
     }                                     
-
+    
+    /**
+     * @param the action event
+     * @return void 
+     */
     private void currentInputActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        // TODO add your handling code here:
-    }                                            
-
-    private void sevenMouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
-
+        
+    }  
+    
+    /**
+     * @param the action event
+     * @return void
+     * The method adds seven to the currentInput 
+     */
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String takeIn;
         takeIn = currentInput.getText() + seven.getText();
         currentInput.setText(takeIn);
     }                                     
-
-    private void oneMouseClicked(java.awt.event.MouseEvent evt) {                                 
-        // TODO add your handling code here:
-    }                                
-
+                              
+    /**
+     * @param the action event
+     * @return void
+     * The method adds one to the currentInput 
+     */
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {                                    
         String takeIn;
         takeIn = currentInput.getText() + one.getText();
         currentInput.setText(takeIn);
         
     }                                   
-
-    private void fiveMouseClicked(java.awt.event.MouseEvent evt) {                                  
-        // TODO add your handling code here:
-    }                                 
-
+                               
+    /**
+     * @param the action event
+     * @return void
+     * The method adds five to the currentInput 
+     */
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String takeIn;
         takeIn = currentInput.getText() + five.getText();
         currentInput.setText(takeIn);
     }                                    
-
-    private void sixMouseClicked(java.awt.event.MouseEvent evt) {                                 
-        // TODO add your handling code here:
-    }                                
-
+                               
+    /**
+     * @param the action event
+     * @return void
+     * The method adds six to the currentInput 
+     */
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {                                    
         String takeIn;
         takeIn = currentInput.getText() + six.getText();
         currentInput.setText(takeIn);
-    }                                   
+    }                                                                   
 
-    private void fourMouseClicked(java.awt.event.MouseEvent evt) {                                  
-        // TODO add your handling code here:
-    }                                 
-
+    /**
+     * @param the action event
+     * @return void
+     * The method adds four to the currentInput 
+     */
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String takeIn;
         takeIn = currentInput.getText() + four.getText();
         currentInput.setText(takeIn);
-    }                                    
+    }                                                                    
 
-    private void nineMouseClicked(java.awt.event.MouseEvent evt) {                                  
-        
-    }                                 
-
+    /**
+     * @param the action event
+     * @return void
+     * The method adds nine to the currentInput 
+     */
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {                                     
        String takeIn;
         takeIn = currentInput.getText() + nine.getText();
         currentInput.setText(takeIn);
     }                                    
-
-    private void twoMouseClicked(java.awt.event.MouseEvent evt) {                                 
-        // TODO add your handling code here:
-    }                                
-
+                                
+    /**
+     * @param the action event
+     * @return void
+     * The method adds two to the currentInput 
+     */
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {                                    
         String takeIn;
         takeIn = currentInput.getText() + two.getText();
         currentInput.setText(takeIn);
     }                                   
-
-    private void threeMouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
-
+                                 
+    /**
+     * @param the action event
+     * @return void
+     * The method adds three to the currentInput 
+     */
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {                                      
         String takeIn;
         takeIn = currentInput.getText() + three.getText();
         currentInput.setText(takeIn);
-    }                                     
+    }                                                                      
 
-    private void zeroMouseClicked(java.awt.event.MouseEvent evt) {                                  
-        // TODO add your handling code here:
-    }                                 
-
+    /**
+     * @param the action event
+     * @return void
+     * The method adds zero to the currentInput 
+     */
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {                                     
         String takeIn;
         takeIn = currentInput.getText() + zero.getText();
         currentInput.setText(takeIn);
-    }                                    
+    }                                                                        
 
-    private void decimalMouseClicked(java.awt.event.MouseEvent evt) {                                     
-
-    }                                    
-
-    private void decimalActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        if ((!(currentInput.getText()).contains(".")))
-        {
+    /**
+     * @param the action event
+     * @return void
+     * The method adds decimal to the currentInput 
+     */
+    private void decimalActionPerformed(java.awt.event.ActionEvent evt) {                                            
             String takeIn;
             takeIn = currentInput.getText() + ".";
             currentInput.setText(takeIn);
-        }
-    }                                       
+        
+    }                                                                     
 
-    private void clearMouseClicked(java.awt.event.MouseEvent evt) {                                   
-        // TODO add your handling code here:
-    }                                  
-
+    /**
+     * @param the action event
+     * @return void
+     * clears the input and the output 
+     */
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {                                      
         currentInput.setText("");
         answerOutput.setText("");
     }                                     
-
-    private void squareMouseClicked(java.awt.event.MouseEvent evt) {                                    
-        
-    }                                   
-
+                                   
+    /**
+     * @param the action event
+     * @return void
+     * method squares the answerOutput 
+     */
     private void squareActionPerformed(java.awt.event.ActionEvent evt) {                                       
         Double takeIn;
         takeIn = Double.parseDouble(answerOutput.getText()) * Double.parseDouble(answerOutput.getText());
         answerOutput.setText(takeIn + "");
-    }                                      
+    }                                                                            
 
-    private void timesNegOneMouseClicked(java.awt.event.MouseEvent evt) {                                         
-        
-    }                                        
-
+    /**
+     * @param the action event
+     * @return void
+     * method multiplies answerOutput by neg 1
+     */
     private void timesNegOneActionPerformed(java.awt.event.ActionEvent evt) {                                            
         Double takeIn;
         takeIn = Double.parseDouble(answerOutput.getText()) * (-1);
         answerOutput.setText(takeIn + "");
-    }                                           
+    }                                                                                 
 
-    private void AnswersActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        // TODO add your handling code here:
-    }                                       
-
-    public String getAnswers ()
-    {
-        return answerOutput.getText();
-    }
+    /**
+     * @param the action event
+     * @return void
+     * method adds a plus sign to the input
+     */
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        if ((!(currentInput.getText()).contains("+")) &&
+            /*if ((!(currentInput.getText()).contains("+")) &&
                 (!(currentInput.getText()).contains("-")) &&
                         (!(currentInput.getText()).contains("/")) &&
                             (!(currentInput.getText()).contains("*")))
-        {
+        {*/
             String takeIn;
             takeIn = currentInput.getText() + "+";
             currentInput.setText(takeIn);
-        }
+        //}
 
     }                                    
 
+    /**
+     * @param the action event
+     * @return void
+     * method adds a minus sign to the input
+     */
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {                                      
-        if ((!(currentInput.getText()).contains("+")) &&
+        /*if ((!(currentInput.getText()).contains("+")) &&
                 (!(currentInput.getText()).contains("-")) &&
                         (!(currentInput.getText()).contains("/")) &&
                             (!(currentInput.getText()).contains("*")))
-        {
+        {*/
             String takeIn;
             takeIn = currentInput.getText() + "-";
             currentInput.setText(takeIn);
-        }
+       // }
     }                                     
 
+    /**
+     * @param the action event
+     * @return void
+     * method adds a multiplication sign to the input
+     */
     private void timesActionPerformed(java.awt.event.ActionEvent evt) {                                      
-        if ((!(currentInput.getText()).contains("+")) &&
+        /*if ((!(currentInput.getText()).contains("+")) &&
                 (!(currentInput.getText()).contains("-")) &&
                         (!(currentInput.getText()).contains("/")) &&
                             (!(currentInput.getText()).contains("*")))
-        {
+        {*/
             String takeIn;
             takeIn = currentInput.getText() + "*";
             currentInput.setText(takeIn);
-        }
+        //}
     }                                     
 
+    /**
+     * @param the action event
+     * @return void
+     * method adds a division sign to the input
+     */
     private void divideActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        if ((!(currentInput.getText()).contains("+")) &&
+        /*if ((!(currentInput.getText()).contains("+")) &&
                 (!(currentInput.getText()).contains("-")) &&
                         (!(currentInput.getText()).contains("/")) &&
                             (!(currentInput.getText()).contains("*")))
-        {
+        {*/
             String takeIn;
             takeIn = currentInput.getText() + "/";
             currentInput.setText(takeIn);
-        }
+        //}
     }                                      
 
-    private void equalsActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    /**
+     * @param the action event
+     * @return void
+     * sends the string from input and sends it to the String calculator
+     */
+    private void equalsActionPerformed(java.awt.event.ActionEvent evt) {
+        if (currentInput.getText().length() < 3)
+        {
+            
+        String b4 = currentInput.getText();
+        String after = c1.operations(b4);
+        answerOutput.setText(after);
+    }
+    else 
+    {
+        try {
+                String b4 = currentInput.getText();
+        String after = c2.operations(b4);
+        answerOutput.setText(after); 
+    } catch (Exception exc) {
+        // TODO: handle exception
+    }       
         
-    }                                      
+    }   
+}
 
+    /**
+     * @param the action event
+     * @return void
+     * method takes the absolute value of the output
+     */
     private void absoluteValueActionPerformed(java.awt.event.ActionEvent evt) {                                              
         Double takeIn;
         takeIn = Math.abs(Double.parseDouble(answerOutput.getText()));
         answerOutput.setText(takeIn + "");
     }                                             
 
+    /**
+     * @param the action event
+     * @return void
+     * method fins the square root of the output
+     */
     private void squareRootActionPerformed(java.awt.event.ActionEvent evt) {                                           
         Double takeIn;
         takeIn = Math.sqrt(Double.parseDouble(answerOutput.getText()));
         answerOutput.setText(takeIn + "");
     }                                          
 
+    /**
+     * @param the action event
+     * @return void
+     * method adds color to the panel 
+     */
     private void colorActionPerformed(java.awt.event.ActionEvent evt) {                                      
         int R = (int)(Math.random()*256);
         int G = (int)(Math.random()*256);
         int B= (int)(Math.random()*256);
         Color RGB = new Color(R, G, B);
         this.getContentPane().setBackground(RGB);
-    }                                     
+    }
+    
+    /**
+     * @param the action event
+     * @return void
+     * method sends the output to another class to calculate binary
+     */
+    private void binaryConvertActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        int takeIn = (int)(Double.parseDouble(answerOutput.getText()));
+        String ans = b1.conBaseThru(takeIn);
+        answerOutput.setText(ans);
+    } 
+    
+    /**
+     * @param the action event
+     * @return void
+     * method sends the output to another class to calculate hexadecimal
+     */
+    private void hexConversionActionPerformed(java.awt.event.ActionEvent evt) {                                                      
+        String takeIn;
+        takeIn = b1.convertHex((int)Double.parseDouble(answerOutput.getText()));
+        answerOutput.setText(takeIn + "");
+    } 
+    
+    /**
+     * @param the action event
+     * @return void
+     * method deletes a character from the input
+     */
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        String takeIn = currentInput.getText();
+        String delete1 = takeIn.substring(0, takeIn.length()-1);
+        currentInput.setText(delete1);
+    }
 
     /**
      * @param args the command line arguments
@@ -691,8 +737,8 @@ public class MyCal extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify                     
-    private javax.swing.JComboBox Answers;
     private javax.swing.JButton absoluteValue;
     private javax.swing.JTextField answerOutput;
     private javax.swing.JButton binaryConvert;
@@ -700,6 +746,7 @@ public class MyCal extends javax.swing.JFrame {
     private javax.swing.JButton color;
     private javax.swing.JTextField currentInput;
     private javax.swing.JButton decimal;
+    private javax.swing.JButton back;
     private javax.swing.JButton divide;
     private javax.swing.JButton eight;
     private javax.swing.JButton equals;
