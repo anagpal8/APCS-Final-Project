@@ -9,7 +9,11 @@ public class StringCalc
     {
    
     }
-    
+    /**
+     * @param the string expression from JFram
+     * @return the calculated number
+     * calculates the operation converts the string to numbers
+     * */
     public String operations(String expression)
     {
         StringAnalyzer s1 = new StringAnalyzer(expression);
